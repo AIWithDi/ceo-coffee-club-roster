@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The CEO Coffee Club Roster</title>
+<meta name="description" content="Everyone from CEO Coffee Club Cowork Day, September 25, in their own handwriting. Tap a handle to copy it, or save her straight to your contacts.">
+<meta property="og:title" content="The CEO Coffee Club Roster">
+<meta property="og:description" content="Cowork Day · September 25. Everyone you met, in their own handwriting.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aiwithdi.github.io/ceo-coffee-club-roster/og.jpg">
+<meta property="og:url" content="https://aiwithdi.github.io/ceo-coffee-club-roster/">
+<meta name="robots" content="noindex">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#503325">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#91B6D9; --blue-deep:#5F88B3; --blue-soft:#DCE8F4;
+  --brown:#503325; --brown-soft:#7A5A48;
+  --cream:#FCF7EE; --cream-2:#F4EAD8; --paper:#FFFDF8;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Montserrat", system-ui, sans-serif;
+  --hand:"Caveat", "Bradley Hand", cursive;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:var(--sans);font-size:15px;line-height:1.5}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+a{color:inherit}
+
+/* scalloped frames: an SVG path drawn behind any [data-wavy] element */
+svg.frame{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+[data-wavy]{position:relative}
+[data-wavy] > :not(svg.frame){position:relative}
+
+/* scalloped stamp buttons (instead of pills) */
+.stamp{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:transform .15s}
+.stamp:active{transform:scale(.96) rotate(-1deg)}
+.stamp svg.icon{width:15px;height:15px}
+.stamp.brown > svg.frame path{fill:var(--brown)} .stamp.brown{color:var(--paper)}
+.stamp.cream > svg.frame path{fill:var(--paper)} .stamp.cream{color:var(--brown)}
+.stamp.blue > svg.frame path{fill:var(--blue)} .stamp.blue{color:var(--brown)}
+
+/* wavy underline text links */
+.squiggle{text-decoration:underline wavy var(--blue-deep);text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-skip-ink:none}
+
+/* ---------- awning + hero ---------- */
+.awning{height:46px;background:repeating-linear-gradient(90deg,var(--blue) 0 40px,var(--paper) 40px 80px);
+  -webkit-mask:radial-gradient(20px at 20px 26px,#000 98%,#0000) 0 0/40px 100% repeat-x, linear-gradient(#000 0 0) 0 0/100% 26px no-repeat;
+  mask:radial-gradient(20px at 20px 26px,#000 98%,#0000) 0 0/40px 100% repeat-x, linear-gradient(#000 0 0) 0 0/100% 26px no-repeat}
+.hero{background:var(--brown);margin-top:-46px;padding:80px 16px 60px}
+.hero-card{max-width:620px;margin:0 auto;padding:46px 30px 44px;text-align:center}
+.hero-card > svg.frame path{fill:var(--blue)}
+.lockup{color:var(--paper);display:inline-flex;align-items:center;gap:10px;margin-bottom:6px}
+.lockup svg{width:44px;height:58px}
+.lockup .wm{font-family:var(--serif);font-size:34px;line-height:1;letter-spacing:-.01em}
+.lockup .wm i{font-style:italic;font-weight:300}
+.tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,9vw,60px);line-height:1;margin:26px 0 8px;letter-spacing:-.015em;color:var(--paper)}
+.hero h1 i{font-weight:300}
+.hero .meta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.hero .meta span+span::before{content:"✳";margin-right:10px;font-weight:400}
+.intro{max-width:500px;margin:22px auto 0;font-weight:500;font-size:15.5px}
+.hero-note{font-family:var(--hand);font-size:23px;line-height:1.1;margin-top:14px;transform:rotate(-2deg)}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+
+/* ---------- toolbar ---------- */
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(252,247,238,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.toolbar::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:10px;background:rgba(252,247,238,.95);
+  -webkit-mask:radial-gradient(10px at 10px 0,#000 98%,#0000) 0 0/20px 100% repeat-x;mask:radial-gradient(10px at 10px 0,#000 98%,#0000) 0 0/20px 100% repeat-x}
+.toolbar-in{max-width:1100px;margin:0 auto;padding:12px 16px 6px}
+.search{display:block;padding:12px 18px 12px 46px}
+.search > svg.frame path{fill:var(--paper);stroke:rgba(80,51,37,.35);stroke-width:1.4}
+.search:focus-within > svg.frame path{stroke:var(--blue-deep);stroke-width:2}
+.search input{width:100%;border:0;background:transparent;font:inherit;font-size:16px;color:var(--brown);outline:none;padding:0}
+.search input::placeholder{color:var(--brown-soft);opacity:.8}
+.search > svg.mag{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:18px;height:18px;opacity:.6}
+.filters{display:flex;gap:4px;overflow-x:auto;padding:10px 16px 4px;margin:0 -16px;scrollbar-width:none;align-items:baseline}
+.filters::-webkit-scrollbar{display:none}
+.filter{flex:none;font-size:13px;font-weight:500;color:var(--brown-soft);padding:4px 6px;white-space:nowrap}
+.filter + .filter::before{content:"✳";color:var(--blue-deep);margin-right:10px;font-size:10px;text-decoration:none;display:inline-block}
+.filter[aria-pressed="true"]{color:var(--brown);font-weight:700}
+.filter[aria-pressed="true"] span{text-decoration:underline wavy var(--blue-deep);text-decoration-thickness:1.5px;text-underline-offset:5px}
+.count{font-family:var(--hand);font-size:19px;color:var(--brown-soft);padding:2px 0 0}
+
+/* ---------- grid + cards ---------- */
+main{max-width:1100px;margin:0 auto;padding:34px 16px 50px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:34px}
+@media (min-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 30px}}
+.card{padding:13px;scroll-margin-top:150px}
+.card > svg.frame path{fill:var(--blue)}
+.card.host > svg.frame path{fill:var(--brown)}
+.panel{background:var(--paper);border-radius:14px;padding:22px 20px 20px;height:100%;display:flex;flex-direction:column}
+
+.top{display:grid;grid-template-columns:38% minmax(0,1fr);gap:18px;align-items:center}
+.pol{position:relative;transform:rotate(var(--rot,-3deg))}
+.pol img{width:100%;height:auto;border-radius:2px;box-shadow:0 1px 2px rgba(80,51,37,.2),0 10px 20px -10px rgba(80,51,37,.45)}
+.tape{position:absolute;z-index:1;width:58px;height:19px;background:rgba(145,182,217,.72);box-shadow:0 1px 1px rgba(80,51,37,.08)}
+.pol .tape{top:-9px;left:50%;transform:translateX(-50%) rotate(4deg)}
+.host-note{font-family:var(--hand);font-size:22px;line-height:1;color:var(--blue-deep);transform:rotate(-4deg);display:inline-block;margin-bottom:4px}
+.who h2{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.02;margin:0 0 8px;letter-spacing:-.01em}
+.who h2 i{font-weight:300}
+.biz{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.45;color:var(--brown-soft)}
+
+/* the handwritten card is the feature */
+.sheet{position:relative;margin:26px -6px 0;transform:rotate(var(--srot,.8deg));cursor:zoom-in;border:0;padding:0;display:block;width:calc(100% + 12px);text-align:left}
+.sheet img{width:100%;height:auto;border-radius:2px;box-shadow:0 2px 3px rgba(80,51,37,.15),0 16px 28px -14px rgba(80,51,37,.5)}
+.sheet .tape.l{top:-8px;left:-10px;transform:rotate(-32deg)}
+.sheet .tape.r{bottom:-8px;right:-10px;transform:rotate(-32deg)}
+.sheet .zoom{position:absolute;right:10px;top:8px;font-family:var(--hand);font-size:19px;color:var(--brown);background:rgba(255,253,248,.85);padding:0 8px;border-radius:3px;transform:rotate(2deg)}
+
+.easy{margin-top:26px;position:relative}
+.easy-label{font-family:var(--hand);font-size:22px;line-height:1;color:var(--blue-deep);display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.easy-label svg{flex:1;height:10px;min-width:30px}
+.handles{display:grid;gap:8px}
+.handle{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.handle .copy{font-family:var(--serif);font-style:italic;font-size:21px;font-weight:400;text-align:left;word-break:break-all;text-decoration:underline wavy var(--blue);text-decoration-thickness:1.5px;text-underline-offset:6px;text-decoration-skip-ink:none}
+.handle .acts{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brown-soft);white-space:nowrap}
+.handle .acts a,.handle .acts button{text-decoration:none;letter-spacing:inherit;text-transform:inherit;font-weight:inherit}
+.handle .acts a:hover,.handle .acts button:hover{color:var(--brown)}
+.handle .done{font-family:var(--hand);font-size:20px;color:var(--blue-deep);text-transform:none;letter-spacing:0;display:none}
+.handle.copied .done{display:inline}
+.handle.copied .acts .lbl{display:none}
+.facts{margin:16px 0 0;display:grid;gap:9px}
+.fact dt{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--brown-soft)}
+.fact dd{margin:1px 0 0;font-family:var(--serif);font-size:16.5px;line-height:1.35}
+.ps{margin-top:14px;font-family:var(--hand);font-size:22px;line-height:1.1;color:var(--brown);transform:rotate(-1.5deg)}
+.foot{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;margin-top:auto;padding-top:20px}
+.foot .stamp{padding:12px 20px;font-size:11.5px}
+.foot .link{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.empty{text-align:center;padding:40px 0;font-family:var(--hand);font-size:26px;display:none}
+
+/* ---------- lightbox ---------- */
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,900px);width:100%}
+dialog::backdrop{background:rgba(48,30,21,.82)}
+dialog .box{background:var(--paper);padding:14px;border-radius:6px;transform:rotate(-.5deg)}
+dialog img{width:100%;height:auto}
+dialog .cap{display:flex;justify-content:space-between;align-items:center;padding:10px 4px 0;font-family:var(--hand);font-size:22px}
+dialog .close{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* ---------- footer ---------- */
+footer{background:var(--brown);color:var(--paper);text-align:center;padding:56px 16px 44px;margin-top:20px;position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:-14px;height:15px;background:var(--brown);
+  -webkit-mask:radial-gradient(15px at 15px 15px,#000 98%,#0000) 0 0/30px 100% repeat-x;mask:radial-gradient(15px at 15px 15px,#000 98%,#0000) 0 0/30px 100% repeat-x}
+footer .big{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(28px,6vw,40px);line-height:1.1}
+footer p{margin:10px 0 0;font-size:13.5px;opacity:.9}
+footer a{font-weight:600}
+footer .gift{margin-top:26px;font-family:var(--hand);font-size:21px;opacity:.85}
+
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,30px);opacity:0;color:var(--paper);padding:13px 24px;font-size:13.5px;font-weight:600;transition:.25s;pointer-events:none;z-index:50;max-width:calc(100% - 32px);text-align:center;white-space:nowrap}
+.toast > svg.frame path{fill:var(--brown)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:380px){.who h2{font-size:26px}.top{gap:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="awning" aria-hidden="true"></div>
+<header class="hero">
+  <div class="hero-card" data-wavy data-a="6" data-l="46">
+    <div class="lockup" aria-label="CEO Coffee Club">
+      <svg viewBox="0 0 44 58" aria-hidden="true"><ellipse cx="22" cy="29" rx="19.5" ry="26.5" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="22" y="37" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="300" font-size="25" fill="currentColor">ce</text></svg>
+      <span class="wm"><i>coffee</i>club</span>
+    </div>
+    <div class="tag">Business is better with girlfriends</div>
+    <h1>The CEO <i>Coffee Club</i> Roster</h1>
+    <div class="meta"><span>Cowork Day</span><span>September 25</span></div>
+    <p class="intro">You shared coffee, Wi-Fi, and a whole lot of yapping. Here's everyone you met (and some you may not have), in their own handwriting.</p>
+    <div class="hero-note">tap any handle to copy it ♡</div>
+    <div class="hero-actions">
+      <button class="stamp brown" id="saveAll" data-wavy data-a="2.4" data-l="17"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg><span>Save everyone</span></button>
+      <button class="stamp cream" id="copyAll" data-wavy data-a="2.4" data-l="17"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg><span>Copy all handles</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-in">
+    <label class="search" data-wavy data-a="2.4" data-l="20">
+      <svg class="mag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search a name, business, or pumpkin spice…" autocomplete="off" aria-label="Search the roster">
+    </label>
+    <div class="filters" id="filters" role="group" aria-label="Filter by type of business"></div>
+    <div class="count" id="count" aria-live="polite"></div>
+  </div>
+</div>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty">No one matches that. Try another word?</p>
+</main>
+
+<footer>
+  <div class="big">Business is better with girlfriends.</div>
+  <p>Hosted by Madison Aldini · <a href="https://www.instagram.com/ceocoffeeclubaz/" target="_blank" rel="noopener">@ceocoffeeclubaz</a></p>
+  <p>Phoenix · Scottsdale · Tempe</p>
+</footer>
+
+<dialog id="zoom"><div class="box"><img id="zoomImg" alt=""><div class="cap"><span id="zoomCap"></span><button class="close" id="zoomClose">Close ✕</button></div></div></dialog>
+<div class="toast" id="toast" role="status" data-wavy data-a="2.4" data-l="17"><span id="toastText"></span></div>
+
+<script>
+const DIMS = {"5011": [465, 711], "5012": [460, 720], "5013": [462, 720], "5014": [463, 720], "5015": [354, 537], "5016": [467, 720], "5017": [449, 720], "5018": [467, 720], "5019": [503, 720], "5020": [454, 720], "5021": [441, 720], "5022": [519, 720], "5023": [514, 720], "5024": [466, 720], "5025": [501, 720], "5026": [457, 720], "5027": [472, 720], "5028": [479, 720], "5029": [490, 720], "5030": [459, 720], "5031": [461, 714], "5032": [470, 720], "5033": [465, 720], "5034": [480, 720]};
+const EVENT = "CEO Coffee Club Cowork Day · Sep 25";
+const CATS = ["Design & Art","Marketing & Social","Coaching & Strategy","Wellness & Beauty","Money & Property","Events & Food","Systems & Tech"];
+const P = [
+  {id:"madison-aldini", img:5024, first:"Madison", last:"Aldini", host:true, biz:"Brand + Web Design", ig:["madisonaldini"], fall:"Halloweentown High", yap:"Good design, travel, H.P., my dog", cats:["Design & Art","Events & Food"]},
+  {id:"alexandra-radway", img:5016, first:"Alexandra", last:"Radway", biz:"Baby Ready Body", ig:["alexandraradway"], fall:"Pumpkin muffins!", yap:"Pregnancy prep, coffee enemas, and all things scaling + motherhood!", cats:["Wellness & Beauty","Coaching & Strategy"]},
+  {id:"alison-rodriguez-jones", img:5032, first:"Alison", last:"Rodriguez-Jones", biz:"Mastermynd Beauty", ig:["alisonrodriguezjones"], fall:"Fall candles and decor, the pumpkin patch, cider slush :)", yap:"Showing up authentically on social media and mindset shifts!", cats:["Wellness & Beauty","Coaching & Strategy"]},
+  {id:"amy-yang", img:5017, first:"Amy", last:"Yang", biz:"Limitless Social AZ", ig:["amyrebeccayang","limitlesssocialaz"], fall:"Apple cinnamon candle", yap:"Airbnbs, commercial real estate + buying established businesses + financial freedom", ps:"Host your event at our 50 Airbnbs in AZ!", cats:["Money & Property","Events & Food"]},
+  {id:"betsey", img:5028, first:"Betsey", last:"", biz:"Become Travel Rich", ig:["becometravelrich"], fall:"Traveling to Japan", yap:"Points + miles, motherhood, travel, spiritual growth", cats:["Money & Property","Coaching & Strategy"]},
+  {id:"courtney-topercer", img:5021, first:"Courtney", last:"Topercer", biz:"Social Media", ig:["court_the_croissant"], fall:"Pumpkin everything", yap:"BTS or social media", cats:["Marketing & Social"]},
+  {id:"gabby-witt", img:5018, first:"Gabby", last:"Witt", biz:"Gabbycoded", ig:["gabbycoded"], fall:"Oversized sweaters and pumpkin matcha and gelato", yap:"Intuition, money, upgrading your life in every way possible", cats:["Coaching & Strategy"]},
+  {id:"haley-thomas", img:5025, first:"Haley", last:"Thomas", biz:"The Passion Pursuit (business strategist) · Camp Climb (summer camp for creative women)", ig:["thepassionpursuitco","campclimb"], fall:"Cozy sweaters", yap:"My daughter, travel, all my biz ideas", cats:["Coaching & Strategy","Events & Food"]},
+  {id:"hannah-smith", img:5026, first:"Hannah", last:"Smith", biz:"HB Social", ig:["hbsocialco"], fall:"Fires and corn mazes", yap:"Goals, traveling", cats:["Marketing & Social"]},
+  {id:"jocelyn-resendiz", img:5019, first:"Jocelyn", last:"Resendiz", biz:"Speed Artist / Illustrator / Design", ig:["jolynsgift"], fall:"Pumpkin spice latte and a show", yap:"Weddings and art", cats:["Design & Art","Events & Food"]},
+  {id:"kaili-meyer", img:5015, first:"Kaili", last:"Meyer", biz:"Reveal Studio Co. · Copy + Sales", ig:["revealstudio.co"], fall:"Cabin + book", yap:"Psychology, my dog, my current favorite snack", cats:["Marketing & Social"]},
+  {id:"leah-stugan", img:5014, first:"Leah", last:"Stugan", biz:"Murals by Saint", ig:["zealous_saint"], fall:"Fall-scented candles, coffee, and a pastry", yap:"The latest mural I am working on", cats:["Design & Art"]},
+  {id:"lindsay-blaszak", img:5031, first:"Lindsay", last:"Blaszak", biz:"Wellness Resource Collective", ig:["wellnessresourcecollective"], fall:"Sweatshirts, warm drinks", yap:"Kids, business, wellness!! :)", cats:["Wellness & Beauty"]},
+  {id:"lindsey-ricketts", img:5030, first:"Lindsey", last:"Ricketts", biz:"Lindsey Lee Creative · Social Media Manager", ig:["lindseyleecreative"], fall:"Fall candles and baking pumpkin bread", yap:"My dog + Noah Kahan", cats:["Marketing & Social"]},
+  {id:"madi-mains", img:5023, first:"Madi", last:"Mains", biz:"Systems / Ops Agency", ig:["therealautomationqueen"], fall:"Pumpkin everything", yap:"Automations, Jesus and coffee", cats:["Systems & Tech"]},
+  {id:"mariah-secrest-comer", img:5027, first:"Mariah", last:"Secrest-Comer", biz:"Sage & Slumber", ig:["sageandslumberstr"], fall:"Evening wine on the front porch", yap:"Holistic health, chihuahua rescue, and why you need a bigger rug :)", cats:["Design & Art","Money & Property"]},
+  {id:"megi", img:5011, first:"Megi", last:"", biz:"Cybersecurity", ig:["megincyber"], fall:"Pumpkin spice cold brew", yap:"Travels, technology, cute fits ♡", cats:["Systems & Tech"]},
+  {id:"natasha-burns", img:5012, first:"Natasha", last:"Burns", biz:"Private Chef", ig:["burnsandthyme"], fall:"All the pumpkin candles", yap:"Food or my wedding", cats:["Events & Food"]},
+  {id:"oni-heard", img:5013, first:"Oni", last:"Heard", biz:"Oni Heard PLLC", ig:["onichante"], fall:"A good book and a candle", yap:"Hopping on the property ladder, Mesa ♡, wedding planning", cats:["Money & Property"]},
+  {id:"sarah-bello", img:5033, first:"Sarah", last:"Bello", biz:"Live Speed Artists Company", ig:["bysarahbello"], fall:"Baking pumpkin bread", yap:"SOPs + content creation", cats:["Design & Art","Events & Food"]},
+  {id:"shari-sims", img:5020, first:"Shari", last:"Sims", biz:"Financial Freedom Planner", ig:["bysharisims"], fall:"Practical Magic + pumpkin", yap:"Money, luxury fashion, fine dining", cats:["Money & Property","Coaching & Strategy"]},
+  {id:"stacey-borrego", img:5034, first:"Stacey", last:"Borrego", biz:"Photographer / Studio Owner", ig:["staceyborregophotography"], fall:"All things pumpkin spice", yap:"The studio grand re-opening!", cats:["Design & Art"]},
+  {id:"steff-smith", img:5022, first:"Steff", last:"Smith", biz:"Community + Events", ig:["your.communitybabe"], fall:"Cozy coffee + yap", yap:"Bringing your dream event to life + my fav local coffee spots", cats:["Events & Food"]},
+  {id:"sydney-bickmeyer", img:5029, first:"Sydney", last:"Bickmeyer", biz:"Powerhouse Chiropractic", ig:["drsydbick","powerhousechiro"], fall:"A hot latte on the patio with a cozy blanket", yap:"Personal development + business growth", cats:["Wellness & Beauty"]}
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const full = p => (p.first + " " + p.last).trim();
+const igUrl = h => "https://www.instagram.com/" + h + "/";
+const rots = [-3.2,2.4,-1.8,3,-2.6,1.6];
+const srots = [.9,-.7,.5,-1,.7,-.5];
+const SQUIG = '<svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M1 5 Q 8 1 15 5 T 29 5 T 43 5 T 57 5 T 71 5 T 85 5 T 99 5 T 113 5 T 127 5" fill="none" stroke="#91B6D9" stroke-width="1.6" stroke-linecap="round"/></svg>';
+
+function cardHTML(p, i){
+  const name = p.last ? `${esc(p.first)} <i>${esc(p.last)}</i>` : `<i>${esc(p.first)}</i>`;
+  const handles = p.ig.map(h => `
+    <div class="handle">
+      <button class="copy" data-copy="@${h}" aria-label="Copy @${h}">@${h}</button>
+      <span class="acts"><button data-copy="@${h}" class="lbl">copy</button><span class="done">copied!</span> &nbsp;·&nbsp; <a href="${igUrl(h)}" target="_blank" rel="noopener">open ↗</a></span>
+    </div>`).join("");
+  return `
+  <article class="card${p.host ? " host" : ""}" id="${p.id}" data-wavy data-a="4.5" data-l="36">
+    <div class="panel">
+      <div class="top">
+        <div class="pol" style="--rot:${rots[i % rots.length]}deg"><span class="tape"></span><img src="img/p${p.img}.jpg" alt="Polaroid of ${esc(full(p))}" loading="lazy" width="${DIMS[p.img][0]}" height="${DIMS[p.img][1]}"></div>
+        <div class="who">
+          ${p.host ? '<span class="host-note">your host ♡</span>' : ""}
+          <h2>${name}</h2>
+          <div class="biz">${esc(p.biz)}</div>
+        </div>
+      </div>
+      <button class="sheet" style="--srot:${srots[i % srots.length]}deg" data-zoom="${p.img}" aria-label="Enlarge ${esc(full(p))}'s handwritten card">
+        <span class="tape l"></span><span class="tape r"></span>
+        <img src="img/h${p.img}.jpg" alt="${esc(full(p))}'s handwritten card from the wall" loading="lazy">
+      </button>
+      <div class="easy">
+        <div class="easy-label">${SQUIG}</div>
+        <div class="handles">${handles}</div>
+        <dl class="facts">
+          <div class="fact"><dt>Fall ritual</dt><dd>${esc(p.fall)}</dd></div>
+          <div class="fact"><dt>Probably yapping about…</dt><dd>${esc(p.yap)}</dd></div>
+        </dl>
+        ${p.ps ? `<div class="ps">P.S. ${esc(p.ps)}</div>` : ""}
+      </div>
+      <div class="foot">
+        <button class="stamp blue" data-vcard="${p.id}" data-wavy data-a="2.4" data-l="17"><span>Save contact</span></button>
+        <button class="link squiggle" data-copyall="${p.id}">Copy her details</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+/* ---------- scalloped frames ---------- */
+function wavyPath(w, h, a, L){
+  const pts = [];
+  const edge = (x0,y0,x1,y1,nx,ny) => {
+    const len = Math.hypot(x1-x0, y1-y0), n = Math.max(2, Math.round(len / L)), steps = Math.ceil(len / 2);
+    for (let s = 0; s < steps; s++){
+      const t = s / steps, off = a * Math.sin(t * n * 2 * Math.PI);
+      pts.push([x0 + (x1-x0)*t + nx*off, y0 + (y1-y0)*t + ny*off]);
+    }
+  };
+  edge(a, a, w-a, a, 0, -1); edge(w-a, a, w-a, h-a, 1, 0);
+  edge(w-a, h-a, a, h-a, 0, 1); edge(a, h-a, a, a, -1, 0);
+  return "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1)).join("L") + "Z";
+}
+function drawFrame(el){
+  let svg = el.querySelector(":scope > svg.frame");
+  if (!svg){
+    svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+    svg.setAttribute("class","frame"); svg.setAttribute("aria-hidden","true");
+    svg.appendChild(document.createElementNS("http://www.w3.org/2000/svg","path"));
+    el.prepend(svg);
+  }
+  const w = el.offsetWidth, h = el.offsetHeight;
+  if (!w || !h) return;
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+  svg.firstChild.setAttribute("d", wavyPath(w, h, +el.dataset.a || 4, +el.dataset.l || 30));
+}
+const ro = new ResizeObserver(es => es.forEach(e => drawFrame(e.target)));
+const frameAll = root => root.querySelectorAll("[data-wavy]").forEach(el => { drawFrame(el); ro.observe(el); });
+
+/* ---------- render ---------- */
+$("#grid").innerHTML = P.map(cardHTML).join("");
+frameAll(document);
+if (location.hash) { const t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) requestAnimationFrame(() => t.scrollIntoView()); }
+
+/* ---------- search + filter ---------- */
+let cat = "All";
+const filters = $("#filters");
+filters.innerHTML = ["All", ...CATS].map(c => `<button class="filter" aria-pressed="${c === "All"}" data-cat="${c}"><span>${c === "All" ? "Everyone" : c}</span></button>`).join("");
+const hay = p => [full(p), p.biz, p.ig.join(" "), p.fall, p.yap, p.ps || "", p.cats.join(" ")].join(" ").toLowerCase();
+function filter(){
+  const q = $("#q").value.trim().toLowerCase();
+  let n = 0;
+  P.forEach(p => {
+    const show = (cat === "All" || p.cats.includes(cat)) && (!q || q.split(/\s+/).every(w => hay(p).includes(w.replace(/^@/,""))));
+    document.getElementById(p.id).hidden = !show; if (show) n++;
+  });
+  $("#count").textContent = n === P.length ? `${n} women, one very good cowork day` : `showing ${n} of ${P.length}`;
+  $("#empty").style.display = n ? "none" : "block";
+}
+filters.addEventListener("click", e => {
+  const b = e.target.closest(".filter"); if (!b) return;
+  cat = b.dataset.cat;
+  filters.querySelectorAll(".filter").forEach(c => c.setAttribute("aria-pressed", c === b));
+  filter();
+});
+$("#q").addEventListener("input", filter);
+filter();
+
+/* ---------- handwriting lightbox ---------- */
+const dlg = $("#zoom");
+$("#zoomClose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+/* ---------- copy ---------- */
+const toast = msg => { const t = $("#toast"); $("#toastText").textContent = msg; drawFrame(t); t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 1800); };
+async function copy(text){
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch {
+    const ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly",""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+    let ok = false; try { ok = document.execCommand("copy"); } catch {}
+    ta.remove(); return ok;
+  }
+}
+const details = p => [full(p), p.biz, ...p.ig.map(h => "@" + h + "  " + igUrl(h)), "Fall ritual: " + p.fall, "Probably yapping about: " + p.yap, p.ps ? "P.S. " + p.ps : ""].filter(Boolean).join("\n");
+
+document.addEventListener("click", async e => {
+  const z = e.target.closest("[data-zoom]");
+  if (z){
+    const p = P.find(x => x.img == z.dataset.zoom);
+    $("#zoomImg").src = `img/h${p.img}.jpg`; $("#zoomImg").alt = `${full(p)}'s handwritten card`;
+    $("#zoomCap").textContent = `${full(p)}, in her own words`;
+    dlg.showModal(); return;
+  }
+  const c = e.target.closest("[data-copy]");
+  if (c){
+    const ok = await copy(c.dataset.copy);
+    const row = c.closest(".handle"); row.classList.add("copied"); setTimeout(() => row.classList.remove("copied"), 1500);
+    toast(ok ? `Copied ${c.dataset.copy}` : "Press and hold to copy");
+    return;
+  }
+  const d = e.target.closest("[data-copyall]");
+  if (d){ const p = P.find(x => x.id === d.dataset.copyall); toast(await copy(details(p)) ? `Copied ${p.first}'s details` : "Couldn't copy. Try again?"); return; }
+  const v = e.target.closest("[data-vcard]");
+  if (v){ const p = P.find(x => x.id === v.dataset.vcard); v.disabled = true; await saveCards([p], (p.first + (p.last ? "-" + p.last : "")).replace(/\s+/g,"-")); v.disabled = false; }
+});
+$("#copyAll").addEventListener("click", async () => {
+  const text = "The CEO Coffee Club Roster · Cowork Day, Sep 25\n\n" + P.map(p => `${full(p)}: ${p.ig.map(h => "@" + h).join(", ")}`).join("\n");
+  toast(await copy(text) ? `Copied all ${P.length} handles` : "Couldn't copy. Try again?");
+});
+$("#saveAll").addEventListener("click", async e => { const b = e.currentTarget; b.disabled = true; await saveCards(P, "CEO-Coffee-Club-Roster"); b.disabled = false; });
+
+/* ---------- contacts (vCard) ---------- */
+const vesc = s => String(s).replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;");
+async function photoB64(n){
+  try {
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; setTimeout(rej, 4000); i.src = `img/p${n}.jpg`; });
+    const s = 300, c = document.createElement("canvas"); c.width = c.height = s;
+    const x = c.getContext("2d");
+    const iw = img.naturalWidth, ih = img.naturalHeight, side = iw * 0.64, sx = (iw - side) / 2, sy = ih * 0.52 - side / 2;
+    x.drawImage(img, sx, sy, side, side, 0, 0, s, s);
+    return c.toDataURL("image/jpeg", 0.8).split(",")[1];
+  } catch { return null; }
+}
+async function vcard(p){
+  const lines = ["BEGIN:VCARD","VERSION:3.0",
+    `N:${vesc(p.last)};${vesc(p.first)};;;`, `FN:${vesc(full(p))}`,
+    `ORG:${vesc(p.biz.split(" · ")[0])}`];
+  p.ig.forEach((h, i) => {
+    lines.push(`item${i+1}.URL:${igUrl(h)}`, `item${i+1}.X-ABLabel:Instagram`);
+    lines.push(`X-SOCIALPROFILE;type=instagram;x-user=${h}:${igUrl(h)}`);
+  });
+  lines.push(`NOTE:${vesc(`Met at ${EVENT}.\nInstagram: ${p.ig.map(h => "@" + h).join(", ")}\nFall ritual: ${p.fall}\nProbably yapping about: ${p.yap}` + (p.ps ? `\nP.S. ${p.ps}` : ""))}`);
+  lines.push(`CATEGORIES:CEO Coffee Club`);
+  const ph = await photoB64(p.img);
+  if (ph) lines.push("PHOTO;ENCODING=b;TYPE=JPEG:" + ph);
+  lines.push("END:VCARD");
+  return lines.join("\r\n");
+}
+async function saveCards(list, name){
+  toast(list.length > 1 ? "Getting everyone ready…" : `Saving ${list[0].first}…`);
+  const text = (await Promise.all(list.map(vcard))).join("\r\n");
+  const file = new File([text], name + ".vcf", {type:"text/vcard"});
+  // Phones: the share sheet offers Contacts directly. Everywhere else: download the .vcf.
+  if (navigator.canShare && navigator.canShare({files:[file]}) && matchMedia("(pointer:coarse)").matches){
+    try { await navigator.share({files:[file]}); return; } catch (err) { if (err.name === "AbortError") return; }
+  }
+  const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = file.name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  toast(list.length > 1 ? `Downloaded. Open it to add all ${list.length}` : "Downloaded. Open it to add to Contacts");
+}
+</script>
+</body>
+</html>
