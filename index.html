@@ -205,7 +205,7 @@ footer .gift{margin-top:26px;font-family:var(--hand);font-size:21px;opacity:.85}
 <div class="toast" id="toast" role="status" data-wavy data-a="2.4" data-l="17"><span id="toastText"></span></div>
 
 <script>
-const DIMS = {"5011": [465, 711], "5012": [460, 720], "5013": [462, 720], "5014": [463, 720], "5015": [354, 537], "5016": [467, 720], "5017": [449, 720], "5018": [467, 720], "5019": [503, 720], "5020": [454, 720], "5021": [441, 720], "5022": [519, 720], "5023": [514, 720], "5024": [466, 720], "5025": [501, 720], "5026": [457, 720], "5027": [472, 720], "5028": [479, 720], "5029": [490, 720], "5030": [459, 720], "5031": [461, 714], "5032": [470, 720], "5033": [465, 720], "5034": [480, 720]};
+const DIMS = {"5011": [465, 711], "5012": [460, 720], "5013": [462, 720], "5014": [463, 720], "5015": [354, 537], "5016": [467, 720], "5017": [449, 720], "5018": [467, 720], "5019": [503, 720], "5020": [454, 720], "5021": [441, 720], "5022": [519, 720], "5023": [514, 720], "5024": [466, 720], "5025": [501, 720], "5026": [457, 720], "5027": [472, 720], "5028": [479, 720], "5029": [490, 720], "5030": [459, 720], "5031": [461, 714], "5032": [470, 720], "5033": [465, 720], "5034": [480, 720], "9001": [251, 399], "9002": [241, 378], "9003": [257, 408], "9004": [251, 399], "9005": [245, 389]};
 const EVENT = "CEO Coffee Club Cowork Day · Sep 25";
 const CATS = ["Design & Art","Marketing & Social","Coaching & Strategy","Wellness & Beauty","Money & Property","Events & Food","Systems & Tech"];
 const P = [
@@ -215,6 +215,7 @@ const P = [
   {id:"amy-yang", img:5017, first:"Amy", last:"Yang", biz:"Limitless Social AZ", ig:["amyrebeccayang","limitlesssocialaz"], fall:"Apple cinnamon candle", yap:"Airbnbs, commercial real estate + buying established businesses + financial freedom", ps:"Host your event at our 50 Airbnbs in AZ!", cats:["Money & Property","Events & Food"]},
   {id:"betsey", img:5028, first:"Betsey", last:"", biz:"Become Travel Rich", ig:["becometravelrich"], fall:"Traveling to Japan", yap:"Points + miles, motherhood, travel, spiritual growth", cats:["Money & Property","Coaching & Strategy"]},
   {id:"courtney-topercer", img:5021, first:"Courtney", last:"Topercer", biz:"Social Media", ig:["court_the_croissant"], fall:"Pumpkin everything", yap:"BTS or social media", cats:["Marketing & Social"]},
+  {id:"dianne-tubbs", img:9003, first:"Dianne", last:"Tubbs", biz:"AI with Di + CRM", ig:["aiwithdi"], fall:"Harry Potter marathon", yap:"Video editing in Claude/Chat", cats:["Systems & Tech","Marketing & Social"]},
   {id:"gabby-witt", img:5018, first:"Gabby", last:"Witt", biz:"Gabbycoded", ig:["gabbycoded"], fall:"Oversized sweaters and pumpkin matcha and gelato", yap:"Intuition, money, upgrading your life in every way possible", cats:["Coaching & Strategy"]},
   {id:"haley-thomas", img:5025, first:"Haley", last:"Thomas", biz:"The Passion Pursuit (business strategist) · Camp Climb (summer camp for creative women)", ig:["thepassionpursuitco","campclimb"], fall:"Cozy sweaters", yap:"My daughter, travel, all my biz ideas", cats:["Coaching & Strategy","Events & Food"]},
   {id:"hannah-smith", img:5026, first:"Hannah", last:"Smith", biz:"HB Social", ig:["hbsocialco"], fall:"Fires and corn mazes", yap:"Goals, traveling", cats:["Marketing & Social"]},
@@ -225,14 +226,18 @@ const P = [
   {id:"lindsey-ricketts", img:5030, first:"Lindsey", last:"Ricketts", biz:"Lindsey Lee Creative · Social Media Manager", ig:["lindseyleecreative"], fall:"Fall candles and baking pumpkin bread", yap:"My dog + Noah Kahan", cats:["Marketing & Social"]},
   {id:"madi-mains", img:5023, first:"Madi", last:"Mains", biz:"Systems / Ops Agency", ig:["therealautomationqueen"], fall:"Pumpkin everything", yap:"Automations, Jesus and coffee", cats:["Systems & Tech"]},
   {id:"mariah-secrest-comer", img:5027, first:"Mariah", last:"Secrest-Comer", biz:"Sage & Slumber", ig:["sageandslumberstr"], fall:"Evening wine on the front porch", yap:"Holistic health, chihuahua rescue, and why you need a bigger rug :)", cats:["Design & Art","Money & Property"]},
+  {id:"maryana-sky", img:9001, first:"Maryana", last:"Sky", biz:"Consulting", ig:["maryanasky"], fall:"A mountain trip to see the colors change", yap:"BJJ, investing, business, travel, psychology", cats:["Coaching & Strategy","Wellness & Beauty"]},
   {id:"megi", img:5011, first:"Megi", last:"", biz:"Cybersecurity", ig:["megincyber"], fall:"Pumpkin spice cold brew", yap:"Travels, technology, cute fits ♡", cats:["Systems & Tech"]},
   {id:"natasha-burns", img:5012, first:"Natasha", last:"Burns", biz:"Private Chef", ig:["burnsandthyme"], fall:"All the pumpkin candles", yap:"Food or my wedding", cats:["Events & Food"]},
   {id:"oni-heard", img:5013, first:"Oni", last:"Heard", biz:"Oni Heard PLLC", ig:["onichante"], fall:"A good book and a candle", yap:"Hopping on the property ladder, Mesa ♡, wedding planning", cats:["Money & Property"]},
   {id:"sarah-bello", img:5033, first:"Sarah", last:"Bello", biz:"Live Speed Artists Company", ig:["bysarahbello"], fall:"Baking pumpkin bread", yap:"SOPs + content creation", cats:["Design & Art","Events & Food"]},
+  {id:"savannah-wade", img:9005, first:"Savannah", last:"Wade", biz:"Ecomm Retention Marketing", ig:["3rootsconsulting"], fall:"Lattes, new clothes + long drives", yap:"Keeping a customer > finding one", cats:["Marketing & Social"]},
   {id:"shari-sims", img:5020, first:"Shari", last:"Sims", biz:"Financial Freedom Planner", ig:["bysharisims"], fall:"Practical Magic + pumpkin", yap:"Money, luxury fashion, fine dining", cats:["Money & Property","Coaching & Strategy"]},
   {id:"stacey-borrego", img:5034, first:"Stacey", last:"Borrego", biz:"Photographer / Studio Owner", ig:["staceyborregophotography"], fall:"All things pumpkin spice", yap:"The studio grand re-opening!", cats:["Design & Art"]},
   {id:"steff-smith", img:5022, first:"Steff", last:"Smith", biz:"Community + Events", ig:["your.communitybabe"], fall:"Cozy coffee + yap", yap:"Bringing your dream event to life + my fav local coffee spots", cats:["Events & Food"]},
-  {id:"sydney-bickmeyer", img:5029, first:"Sydney", last:"Bickmeyer", biz:"Powerhouse Chiropractic", ig:["drsydbick","powerhousechiro"], fall:"A hot latte on the patio with a cozy blanket", yap:"Personal development + business growth", cats:["Wellness & Beauty"]}
+  {id:"sydney-bickmeyer", img:5029, first:"Sydney", last:"Bickmeyer", biz:"Powerhouse Chiropractic", ig:["drsydbick","powerhousechiro"], fall:"A hot latte on the patio with a cozy blanket", yap:"Personal development + business growth", cats:["Wellness & Beauty"]},
+  {id:"tina-meyer", img:9004, first:"Tina", last:"Meyer", biz:"Wealth By Tina", ig:["wealthbytina"], fall:"Football games, apps + naps :)", yap:"Workout classes, travel, coffee, loving AZ!", cats:["Money & Property"]},
+  {id:"vanessa-krystek", img:9002, first:"Vanessa", last:"Krystek", biz:"Real Estate | Title Biz Dev", ig:["arizonatitlegirls"], fall:"PSL", yap:"Traveling, food, my dog, health, investing", cats:["Money & Property"]}
 ];
 
 const $ = s => document.querySelector(s);
